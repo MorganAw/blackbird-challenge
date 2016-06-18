@@ -1,0 +1,23 @@
+{
+  "name": "blackbird-interview",
+  "version": "0.0.0",
+  "description": "Morgan Aw's Blackbird coding challenge",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Morgan Aw",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "express": "^4.14.0",
+    "pug": "^2.0.0-beta3",
+    "serve-favicon": "^2.3.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-core": "^6.9.1",
+    "babel-loader": "^6.2.4",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "webpack": "^1.13.1"
+  }
+}
