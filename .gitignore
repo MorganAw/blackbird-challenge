@@ -1,3 +1,6 @@
+# OS
+.DS_Store
+
 # Logs
 logs
 *.log
@@ -38,3 +41,4 @@ jspm_packages
 
 build/
 node_modules/
+static/packed/

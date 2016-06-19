@@ -4,20 +4,56 @@
   "description": "Morgan Aw's Blackbird coding challenge",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "NODE_ENV=production node ./build/server/server.js",
+    "server": "NODE_ENV=development node ./build/server/server.js",
+    "client": "NODE_ENV=development webpack -w --progress --color",
+    "prestart": "npm run build-prod",
+    "preserver": "npm run build-server",
+    "preclient": "npm run clean-client",
+    "build-server": "babel ./src -d ./build --copy-files",
+    "build-prod": "npm run prod-client && npm run prod-server",
+    "prod-server": "NODE_ENV=production babel ./src -d ./build --copy-files",
+    "prod-client": "NODE_ENV=production webpack",
+    "preprod-server": "npm run clean-server",
+    "preprod-client": "npm run clean-client",
+    "clean-client": "rm -rf ./static/webpack",
+    "clean-server": "rm -rf ./build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MorganCAw/blackbird-challenge.git"
   },
   "author": "Morgan Aw",
   "license": "UNLICENSED",
   "dependencies": {
     "express": "^4.14.0",
+    "merlin.js": "^1.3.0",
     "pug": "^2.0.0-beta3",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "react-redux": "^4.4.5",
+    "react-router": "^2.4.1",
+    "react-router-redux": "^4.0.5",
+    "redux": "^3.5.2",
     "serve-favicon": "^2.3.0"
   },
   "devDependencies": {
     "babel-cli": "^6.10.1",
     "babel-core": "^6.9.1",
     "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "css-loader": "^0.23.1",
     "extract-text-webpack-plugin": "^1.0.1",
+    "node-sass": "^3.8.0",
+    "sass-loader": "^3.2.0",
+    "style-loader": "^0.13.1",
     "webpack": "^1.13.1"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "react"
+    ]
   }
 }

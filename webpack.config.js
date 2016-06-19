@@ -9,7 +9,7 @@ var devtool = process.env.NODE_ENV === 'development' ? 'source-map' : null;
 module.exports = {
   devtool: 'source-map',
   entry: [
-    './src/client/newClient'
+    './src/client/app.jsx'
   ],
   output: {
     path: path.join(__dirname, 'static', 'packed'),
@@ -43,6 +43,6 @@ module.exports = {
     }]
   },
   resolve: {
-    extensions: ['', '.js', '.scss', '.css']
+    extensions: ['', '.js', '.jsx', '.scss', '.css']
   }
 }

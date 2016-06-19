@@ -1,0 +1,16 @@
+@import './normalize.css';
+@import './roboto.css';
+
+html, body {
+  min-width: 768px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #444444;
+  position: relative;
+}
+
+@import './app.scss';
+@import './navbar.scss';
+@import './search.scss';
+@import './results.scss';

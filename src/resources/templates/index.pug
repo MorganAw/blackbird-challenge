@@ -10,26 +10,6 @@ html
     link(href='/packed/feathers.css', rel='stylesheet')
 
     body
-      div(id="header")
-        | H E A D E R B O Y S
-      div(id="scroll-container")
-        div(id="about-me" class="section"
-            scroll-400="transform: translateY(0%);"
-            scroll-0="transform: translateY(100%);")
-          | A B O U T M E B O Y S
-        div(id="skills" class="section"
-            scroll-500="transform: translateY(100%);"
-            scroll-900="transform: translateY(0%);")
-          | S K I L L E D B O Y S
-        div(id="experience" class="section"
-            scroll-1000="transform: translateY(100%);"
-            scroll-1400="transform: translateY(0%);")
-          | E X P E R I E N C E B O Y S
-        div(id="contact" class="section"
-            scroll-1500="transform: translateY(100%);"
-            scroll-1900="transform: translateY(0%);")
-          | C O N T A C T B O Y S
-      div(id="footer")
-        | F O O T E R B O Y S
+      #content!=app
 
     script(src='/packed/avian.js' async)

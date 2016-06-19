@@ -1,0 +1,37 @@
+#search_container {
+  height: 50px;
+  width: 100%;
+  padding: 25px 0px;
+  font-size: 20px;
+  position: relative;
+  text-align: center;
+
+  input {
+    border: solid 1px #adadad;
+    width: 60%;
+    padding: 5px;
+    text-align: left;
+  }
+
+  .typeahead {
+    width: 60%;
+    margin: 0px auto;
+    text-align: left;
+    background: white;
+    border: 1px solid #adadad;
+    border-top: none;
+
+    .typeahead_entry {
+      font-weight: 600;
+      padding: 5px 5px;
+
+      .searchterm {
+        font-weight: 400;
+      }
+
+      &:hover {
+        background-color: #eeeeee;
+      }
+    }
+  }
+}
